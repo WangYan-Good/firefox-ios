@@ -1,3 +1,9 @@
+/* Contextual hints are little popups that appear for the users informing them of new features. When a user opens the new menu design for the first time, this contextual hint appears. This is the body text for the hint. */
+"ContextualHints.MainMenu.NewMenu.Body.v132" = "Gjeni më shpejt ç’kërkoni, nga shfletim privat e deri te veprime ruajtjeje.";
+
+/* Contextual hints are little popups that appear for the users informing them of new features. When a user opens the new menu design for the first time, this contextual hint appears. This is the title for the hint. */
+"ContextualHints.MainMenu.NewMenu.Title.v132" = "E re: menu e hajthme";
+
 /* On the main menu, at the top, when the user is signed out. The description for the sign in action */
 "MainMenu.Account.SignedOut.Description.v131" = "Njëkohësoni fjalëkalime, skeda, etj";
 
@@ -111,6 +117,9 @@
 
 /* On the main menu, a string below the Tool submenu title, indicating what kind of tools are available in that menu. This string is for the Zoom tool. */
 "MainMenu.Submenus.Tools.Zoom.Subtitle.v131" = "Zmadhim/Zvogëlim";
+
+/* On the main menu, in the tools submenu, the title for the menu component that indicates the current zoom level. Placeholder is for the current zoom level percentage. */
+"MainMenu.Submenus.Tools.Zoom.Title.v131" = "Zoom (%@)";
 
 /* On the main menu, the title for the action that will create a new private tab. */
 "MainMenu.TabsSection.NewPrivateTab.Title.v131" = "Skedë e Re Private";
