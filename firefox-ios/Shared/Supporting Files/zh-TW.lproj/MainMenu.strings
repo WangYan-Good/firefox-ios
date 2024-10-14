@@ -1,3 +1,9 @@
+/* Contextual hints are little popups that appear for the users informing them of new features. When a user opens the new menu design for the first time, this contextual hint appears. This is the body text for the hint. */
+"ContextualHints.MainMenu.NewMenu.Body.v132" = "不論是隱私瀏覽模式還是儲存動作，讓您更快找到想要的功能。";
+
+/* Contextual hints are little popups that appear for the users informing them of new features. When a user opens the new menu design for the first time, this contextual hint appears. This is the title for the hint. */
+"ContextualHints.MainMenu.NewMenu.Title.v132" = "新功能：流線型選單";
+
 /* On the main menu, at the top, when the user is signed out. The description for the sign in action */
 "MainMenu.Account.SignedOut.Description.v131" = "同步密碼、分頁與更多內容";
 
@@ -89,13 +95,13 @@
 "MainMenu.Submenus.Tools.Print.Title.v131" = "列印";
 
 /* On the main menu, the title for the action that will turn the reader view on for the current website. */
-"MainMenu.Submenus.Tools.ReaderView.Off.Title.v131" = "關閉閱讀模式";
+"MainMenu.Submenus.Tools.ReaderView.Off.Title.v131" = "關閉閱讀畫面";
 
 /* On the main menu, the title for the action that will turn the reader view on for the current website. */
-"MainMenu.Submenus.Tools.ReaderView.On.Title.v131" = "開啟閱讀模式";
+"MainMenu.Submenus.Tools.ReaderView.On.Title.v131" = "開啟閱讀畫面";
 
 /* On the main menu, a string below the Tool submenu tiitle, indicating what kind of tools are available in that menu. This string is for the Reader View tool. */
-"MainMenu.Submenus.Tools.ReaderView.Subtitle.v131" = "閱讀模式";
+"MainMenu.Submenus.Tools.ReaderView.Subtitle.v131" = "閱讀畫面";
 
 /* On the main menu, a string below the Tool submenu tiitle, indicating what kind of tools are available in that menu. This string is for the Report Broken Site tool. */
 "MainMenu.Submenus.Tools.ReportBrokenSite.Subtitle.v131" = "回報";
