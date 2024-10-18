@@ -179,15 +179,14 @@ export class FormAutofillSection {
 
     const autofillableSections = [];
     for (const section of sections) {
-      const fieldDetails = section.fieldDetails;
-      if (!fieldDetails.length) {
+      if (!section.fieldDetails.length) {
         continue;
       }
 
       const autofillableSection =
         section.type == FormSection.ADDRESS
-          ? new FormAutofillAddressSection(fieldDetails)
-          : new FormAutofillCreditCardSection(fieldDetails);
+          ? new FormAutofillAddressSection(section.fieldDetails)
+          : new FormAutofillCreditCardSection(section.fieldDetails);
 
       if (ignoreInvalid && !autofillableSection.isValidSection()) {
         continue;
@@ -295,8 +294,7 @@ export class FormAutofillSection {
       if (detail.fieldName == "cc-csc") {
         continue;
       }
-
-      const { filledValue } = formFilledData.get(detail.elementId);
+      const { filledValue } = formFilledData.get(detail.elementId) ?? {};
 
       if (
         !filledValue ||
@@ -335,12 +333,14 @@ export class FormAutofillSection {
 
       // When both visible and invisible <select> elements exist, we only autofill the
       // visible <select>.
-      if (fieldDetail.localName == "select" && !fieldDetail.isVisible) {
-        return !this.fieldDetails.some(
-          field => field.fieldName == fieldDetail.fieldName && field.isVisible
-        );
+      if (fieldDetail.localName == "select") {
+        if (!fieldDetail.isVisible) {
+          return !this.fieldDetails.some(
+            field => field.fieldName == fieldDetail.fieldName && field.isVisible
+          );
+        }
       }
-      return true;
+      return fieldDetail.isVisible;
     });
   }
 
@@ -388,6 +388,8 @@ export class FormAutofillSection {
   }
 
   onSubmitted(formFilledData) {
+    this.submitted = true;
+
     lazy.AutofillTelemetry.recordSubmittedSectionCount(this.fieldDetails, 1);
     lazy.AutofillTelemetry.recordFormInteractionEvent(
       "submitted",
